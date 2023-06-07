@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  justify-content: space-between;
   background: var(--gray-500);
   border: 1px solid var(--gray-400);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
@@ -11,6 +12,59 @@
   gap: 0.75rem;
 
   margin-bottom: 0.75rem;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 1.091rem; 
+  height: 1.091rem; 
+  border-radius: 999px;
+  outline: 0.125rem solid var(--blue-100);
+  background-color: transparent;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+  transition: .2s;
+}
+
+input[type="checkbox"]::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f00c";
+  font-size: 0.75rem;
+  color: var(--gray-100);
+
+  display: none;
+}
+
+input[type="checkbox"]:hover {
+  background-color: var(--blue-500);
+  opacity: .2;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--purple-500);
+  outline: 0.125rem solid var(--purple-500);
+}
+
+input[type="checkbox"]:checked + label{
+  text-decoration-line: line-through;
+  color: var(--gray-300);
+}
+
+input[type="checkbox"]:checked::after {
+  display: block;
+}
+
+input[type="checkbox"]:checked:hover {
+  background-color: var(--purple-100);
+  outline: 0.125rem solid var(--purple-100);
+  opacity: .9;
 }
 
 .label {
@@ -41,3 +95,4 @@
   border-radius: 0.25rem;
   border: none;
 }
+
