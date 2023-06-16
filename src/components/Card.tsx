@@ -6,13 +6,18 @@ import { Trash } from 'phosphor-react';
 
 interface TaskProps {
   task: ITask,
-  deleteTask(DeleteTaskById: number): void,
+  deleteTask(taskId: number): void,
+  handleTaskCompleted(taskId: number): void,
 }
 
-export function Card({ task, deleteTask }: TaskProps) {
+export function Card({ task, deleteTask, handleTaskCompleted }: TaskProps) {
+
   return(
     <div className={styles.cardWrapper}>
-      <input type="checkbox" />  
+      <input 
+        type="checkbox"
+        onClick={() => handleTaskCompleted(task.id)}
+      />  
       <label className={styles.label} >
         {task.content}
       </label>

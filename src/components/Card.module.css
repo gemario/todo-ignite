@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  justify-content: space-between;
   background: var(--gray-500);
   border: 1px solid var(--gray-400);
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.06);
@@ -73,6 +72,7 @@ input[type="checkbox"]:checked:hover {
   line-height: 140%;
 
   color: var(--gray-100);
+  width: 100%;
 }
 
 .cardWrapper .btn {
